@@ -1,0 +1,27 @@
+digraph SimpleShell {
+    rankdir=TB;
+    node [shape=box];
+    User [label="User"];
+    Shell [label="Interactive Shell Loop"];
+    Parser [label="Tokenizer / Parser"];
+    Builtins [label="Built-in Handler"];
+    Executor [label="Command Executor"];
+    Redirect [label="I/O Redirection"];
+    Pipeline [label="Pipeline Manager"];
+    Process [label="Process Management"];
+    OS [label="Operating System"];
+    Output [label="Terminal Output / Errors"];
+
+    User -> Shell;
+    Shell -> Parser;
+    Parser -> Builtins;
+    Parser -> Executor;
+    Executor -> Redirect;
+    Executor -> Pipeline;
+    Redirect -> Process;
+    Pipeline -> Process;
+    Builtins -> Output;
+    Process -> OS;
+    OS -> Output;
+    Output -> Shell [label="next prompt"];
+}
