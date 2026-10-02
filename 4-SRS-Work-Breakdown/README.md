@@ -1,3 +1,8 @@
-# 4-SRS-Work-Breakdown
+# 4 — SRS and Work Breakdown
 
-Add the evidence/documents required for this section here.
+## Contents
+
+- `SRS.md` — Software Requirements Specification
+- `Work_Breakdown.md` — Work Breakdown Structure and Jira mapping
+
+These documents connect the project's requirements to design, implementation, testing, and release activities.
